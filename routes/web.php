@@ -27,7 +27,7 @@ Route::get('/success',function()
 {
     return view('success');
 });
-/*
+
 
 
 Route::get('/hello',[IndexController::class,'sayhello']);
@@ -37,6 +37,9 @@ Route::post('/login',[loginController::class,'checkLogin']);
 Route::get('/logout',[loginController::class,'logout']);
 
 //This for E-Store-App
+
+Route::get('/EStoreLogin',[loginController::class,'CustomerLogin']);
+/*
 Route::get('/',function(){
 return view('index');
 });

@@ -40,5 +40,9 @@ class loginController extends Controller
             return redirect('/');
         }
 
-
+//This For E-Store 
+public function CustomerLogin()
+{
+    return view("e-storeLogin");
+}
 }
