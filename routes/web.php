@@ -27,7 +27,7 @@ Route::get('/success',function()
 {
     return view('success');
 });
-
+/*
 
 
 Route::get('/hello',[IndexController::class,'sayhello']);
@@ -35,3 +35,20 @@ Route::get('/hello',[IndexController::class,'sayhello']);
 Route::get('/login',[loginController::class,'loginPage']);
 Route::post('/login',[loginController::class,'checkLogin']);
 Route::get('/logout',[loginController::class,'logout']);
+
+//This for E-Store-App
+Route::get('/',function(){
+return view('index');
+});
+
+Route::view('customerRegistation','register');
+Route::post('/login',[loginController::class,'checklogin']);
+Route::post('/reg',[UserController::class,'store']);
+Route::resources(['product'=>ProductController::class,
+'user'=>UserController::class,
+'orders'=>OrderController::class
+]);
+
+Rout::get('/logout',[LoginController::class,'logout']);
+Route::get('/placeorder/{product}',[ProductController::class,'ShowToOrder']);
+//Not finished--*/
